@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(python:*)",
+      "Bash(powershell -Command \"[Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\)\\)\")",
+      "Bash(venvScriptspip:*)",
+      "Bash(venv/Scripts/python.exe:*)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(curl:*)",
+      "Bash(taskkill:*)",
+      "Bash(powershell:*)",
+      "Bash(tasklist:*)",
+      "Bash(dir /b)",
+      "Bash(git add:*)"
+    ]
+  }
+}
