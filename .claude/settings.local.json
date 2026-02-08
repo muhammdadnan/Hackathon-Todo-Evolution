@@ -21,7 +21,8 @@
       "Bash(where:*)",
       "Bash(gh auth status)",
       "Bash(gh auth login --help:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
