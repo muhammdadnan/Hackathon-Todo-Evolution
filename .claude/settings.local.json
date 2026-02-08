@@ -25,7 +25,12 @@
       "Bash(git commit:*)",
       "Bash(git remote add:*)",
       "Bash(git branch -M main)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(ls:*)",
+      "Bash(npm install -g vercel)",
+      "Bash(vercel --version)",
+      "Bash(vercel --help:*)",
+      "Bash(vercel whoami)"
     ]
   }
 }
