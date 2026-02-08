@@ -1,0 +1,45 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: dapr-config
+  namespace: default
+spec:
+  # Tracing configuration
+  tracing:
+    samplingRate: "1"
+    zipkin:
+      endpointAddress: "http://zipkin:9411/api/v2/spans"
+
+  # Metrics configuration
+  metrics:
+    enabled: true
+
+  # Middleware configuration
+  httpPipeline:
+    handlers:
+    - name: cors
+      type: middleware.http.cors
+
+  # Access control
+  accessControl:
+    defaultAction: allow
+    trustDomain: "public"
+
+  # API configuration
+  api:
+    allowed:
+    - name: state
+      version: v1
+      protocol: http
+    - name: pubsub
+      version: v1
+      protocol: http
+    - name: bindings
+      version: v1
+      protocol: http
+
+  # Secrets configuration
+  secrets:
+    scopes:
+    - storeName: kubernetes
+      defaultAccess: allow
