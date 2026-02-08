@@ -57,14 +57,18 @@ async function apiRequest<T>(
   const token = getAuthToken();
 
   // Prepare headers
-  const headers: HeadersInit = {
+  const headers: Record<string, string> = {
     'Content-Type': 'application/json',
-    ...options.headers,
   };
 
   // Add Authorization header if token exists
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  // Merge with any additional headers from options
+  if (options.headers) {
+    Object.assign(headers, options.headers);
   }
 
   // Make request with credentials to include cookies
