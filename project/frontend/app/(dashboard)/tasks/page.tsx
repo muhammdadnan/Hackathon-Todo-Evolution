@@ -16,6 +16,7 @@ import { TaskList } from '@/components/TaskList';
 import { TaskForm } from '@/components/TaskForm';
 import { Task } from '@/lib/types';
 import { taskApi, ApiClientError } from '@/lib/api';
+import Link from 'next/link';
 
 export default function TasksPage() {
   const { user, isLoading } = useRequireAuth();
@@ -116,6 +117,9 @@ export default function TasksPage() {
               </p>
             </div>
             <div className="flex items-center gap-3">
+              <Link href="/chat">
+                <Button variant="ghost">AI Chat</Button>
+              </Link>
               <Button variant="primary" onClick={handleAddTask}>
                 Add Task
               </Button>

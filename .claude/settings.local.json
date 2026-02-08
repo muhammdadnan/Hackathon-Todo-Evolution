@@ -14,7 +14,14 @@
       "Bash(powershell:*)",
       "Bash(tasklist:*)",
       "Bash(dir /b)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: Phase 2 - Complete Todo App with Mock Data\n\n- Implemented all 6 user stories \\(auth, CRUD operations\\)\n- Added mock data support for frontend-only deployment\n- Configured for Vercel deployment\n- Next.js 16 + TypeScript + Tailwind CSS\n- FastAPI backend \\(ready for database integration\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npm run build)",
+      "Bash(git commit -m \"fix: TypeScript error in API client headers\")",
+      "Bash(where:*)",
+      "Bash(gh auth status)",
+      "Bash(gh auth login --help:*)",
+      "Bash(npx vercel:*)"
     ]
   }
 }
