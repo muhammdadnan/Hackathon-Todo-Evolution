@@ -22,7 +22,10 @@
       "Bash(gh auth status)",
       "Bash(gh auth login --help:*)",
       "Bash(npx vercel:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch -M main)",
+      "Bash(git push:*)"
     ]
   }
 }
